@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TCQXJTLM');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COSMIC FAIRY RECORDS - Melodic Techno from Another Dimension</title>
     <meta name="description" content="Based in New York, inspired by Berlin, made for the universe. Melodic techno label focused on deep soundscapes and emotional connection.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCQXJTLM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <main class="page">
         <!-- Hero -->
         <section id="hero" class="hero">
             <nav class="nav">
                 <a href="#hero">Home</a>
-                <a href="#releases">Releases</a>
-                <a href="#artists">Artists</a>
+                <a href="#upcoming">Releases</a>
                 <a href="#demo">Demo Submissions</a>
+                <a href="#about">About</a>
             </nav>
             <div class="hero-stars">
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
+                <div class="star star-shine"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star star-shine"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star star-shine"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
+                <div class="star star-shine"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
+                <div class="star star-shine"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
@@ -47,7 +71,9 @@
                 <!-- <img src="img/hero-swirl.webp" alt="abstract light" /> -->
             </div>
             <div class="hero-top-mask">
-                <img src="img/cosmic-fairy-logo.webp" alt="Cosmic Fairy Logo" class="hero-logo-icon" />
+                <div class="logo-container">
+                    <img src="img/cosmic-fairy-logo.webp" alt="Cosmic Fairy Logo" class="hero-logo-icon" />
+                </div>
             </div>
             <div class="hero-bottom-mask">
                 <!-- <span class="bottom-mask-text">Melodic techno from another dimension</span> -->
@@ -263,6 +289,10 @@
                 <h2>DEMO SUBMISSION</h2>
             </div>
             <p class="demo-description">We're always open to new artists and sonic explorers. Send us your demo — we listen to every submission.</p>
+            <div class="demo-instructions">
+                <p>Submit your demo submissions to the form below and be sure to follow <a href="https://instagram.com/cosmicfairyrecords" target="_blank" rel="noopener">@cosmicfairyrecords</a> to stay up to date on new music and artist signings.</p>
+                <p>Please only send us unreleased music. We much prefer private Soundcloud playlist links or Dropbox links. Make sure to send us the share link from Soundcloud / Dropbox.</p>
+            </div>
             <form class="demo-form" id="demoForm">
                 <div class="input-field">
                     <input type="text" id="name" name="name" placeholder="Name" required>
@@ -271,10 +301,22 @@
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-field">
-                    <input type="url" id="link" name="link" placeholder="SoundCloud / Dropbox" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
                 </div>
                 <div class="input-field">
-                    <input type="text" id="artist-name" name="artist-name" placeholder="Name" required>
+                    <input type="url" id="demo-link" name="demo-link" placeholder="Demo Link (Soundcloud / Dropbox)" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="country" name="country" placeholder="Country" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="instagram" name="instagram" placeholder="Instagram Username" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="other-labels" name="other-labels" placeholder="Have you sent this music to any other labels? ( Y / N )" required>
+                </div>
+                <div class="input-field input-field-textarea">
+                    <textarea id="notes" name="notes" placeholder="Notes" rows="4"></textarea>
                 </div>
                 <button type="submit" class="submit-btn">
                     <span>Message & Send Demo</span>
@@ -304,6 +346,16 @@
                 </div>
                 <div class="about-line about-line-bottom"></div>
             </div>
+            
+            <div class="subscribe-section">
+                <h3 class="subscribe-heading">Subscribe & stay updated with all the latest music, news, and more</h3>
+                <form class="subscribe-form" id="subscribeForm">
+                    <input type="email" id="subscribe-email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">
+                        <span>Sign Me Up</span>
+                    </button>
+                </form>
+            </div>
         </section>
 
         <!-- Footer -->
@@ -324,6 +376,11 @@
                 <div class="footer-col">
                     <p><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></p>
                 </div>
+            </div>
+            <div class="footer-legal">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <span class="footer-legal-separator">•</span>
+                <a href="/terms-of-use.html">Terms of Use</a>
             </div>
             <p class="footer-tagline">See you among the stars</p>
         </footer>
