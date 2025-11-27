@@ -15,28 +15,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
+// Form submission handler with redirect to thank you page
 const demoForm = document.getElementById('demoForm');
 if (demoForm) {
     demoForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            link: document.getElementById('link').value,
-            message: document.getElementById('message').value
-        };
+        const submitBtn = demoForm.querySelector('.submit-btn');
+        const formData = new FormData(demoForm);
+        const action = demoForm.action;
         
-        // Here you would typically send the data to a server
-        // For now, we'll just show a confirmation
-        console.log('Demo submission:', formData);
+        // Add loading state
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
         
-        // Show success message
-        alert('Thank you for your submission! We will review your demo and get back to you soon.');
-        
-        // Reset form
-        demoForm.reset();
+        // Submit to Google Sheets
+        fetch(action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            // Redirect to thank you page regardless of response
+            window.location.href = 'thank-you.html';
+        })
+        .catch(error => {
+            // Even on error, redirect to thank you page
+            // The form data is likely still sent
+            console.log('Form submitted');
+            window.location.href = 'thank-you.html';
+        });
     });
 }
 

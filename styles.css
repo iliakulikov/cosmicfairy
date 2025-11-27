@@ -1131,6 +1131,26 @@ img {
     opacity: 0.9;
 }
 
+.submit-btn.loading {
+    animation: borderPulse 1.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes borderPulse {
+    0%, 100% {
+        border-color: #3d3d3d;
+    }
+    25% {
+        border-color: #8b5cf6;
+    }
+    50% {
+        border-color: #06b6d4;
+    }
+    75% {
+        border-color: #ec4899;
+    }
+}
+
 .submit-btn span {
     position: relative;
     z-index: 1;
