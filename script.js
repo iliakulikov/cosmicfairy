@@ -15,6 +15,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Subscribe form submission handler
+const subscribeForm = document.getElementById('subscribeForm');
+if (subscribeForm) {
+    subscribeForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const subscribeBtn = subscribeForm.querySelector('.subscribe-btn');
+        const formData = new FormData(subscribeForm);
+        const action = subscribeForm.action;
+        
+        // Add loading state
+        subscribeBtn.classList.add('loading');
+        subscribeBtn.disabled = true;
+        
+        // Submit to Google Sheets
+        fetch(action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            // Redirect to thank you page
+            window.location.href = 'thank-you.html';
+        })
+        .catch(error => {
+            // Even on error, redirect to thank you page
+            console.log('Subscription submitted');
+            window.location.href = 'thank-you.html';
+        });
+    });
+}
+
 // Form submission handler with redirect to thank you page
 const demoForm = document.getElementById('demoForm');
 if (demoForm) {

@@ -1337,6 +1337,11 @@ img {
     transform: translateY(-2px);
 }
 
+.subscribe-btn.loading {
+    animation: borderPulse 1.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
 .about-detail-text {
     font-size: 25px;
     font-weight: 300;
