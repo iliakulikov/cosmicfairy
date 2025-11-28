@@ -1391,7 +1391,7 @@ img {
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 73px 193px;
+    justify-content: space-between;
     margin-bottom: 125px;
 }
 
@@ -2007,6 +2007,10 @@ img {
         gap: 40px;
     }
 
+    .footer-col:last-child {
+        text-align: right;
+    }
+
     .footer-col p {
         font-size: 20px;
     }
@@ -2269,6 +2273,10 @@ img {
 
     .footer-col {
         gap: 24px;
+    }
+
+    .footer-col:last-child {
+        text-align: left;
     }
 
     .footer-col p {
