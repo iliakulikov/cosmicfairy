@@ -65,12 +65,15 @@ img {
     letter-spacing: -0.4px;
     line-height: 1.4;
     white-space: nowrap;
-    transition: opacity 0.3s ease;
-    padding: 5px 0;
+    transition: all 0.3s ease;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
 }
 
 .nav a:hover {
     opacity: 0.8;
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Hero */
@@ -755,7 +758,7 @@ img {
 
 /* Upcoming */
 .upcoming {
-    padding: 100px 60px 40px;
+    padding: 50px 60px 40px;
     background: var(--color-panel);
 }
 
@@ -1484,8 +1487,8 @@ img {
     }
 
     .nav a {
-        line-height: 1.2;
-        padding: 4px 0;
+        line-height: 1.4;
+        padding: 10px 18px;
         display: inline-flex;
         align-items: center;
     }
@@ -1731,16 +1734,17 @@ img {
     }
 
     .nav {
-        gap: 16px;
-        row-gap: 6px;
+        gap: 8px;
+        row-gap: 10px;
         max-width: 92%;
         top: 64.5px;
+        flex-wrap: nowrap;
     }
 
     .nav a {
-        font-size: 14px;
-        line-height: 1.2;
-        padding: 4px 0;
+        font-size: 11px;
+        line-height: 1.4;
+        padding: 10px 14px;
     }
 
     .hero {
@@ -1808,7 +1812,7 @@ img {
     .upcoming,
     .artists,
     .footer {
-        padding: 80px 24px;
+        padding: 50px 24px;
     }
 
     .demo {
@@ -2069,16 +2073,17 @@ img {
     }
 
     .nav {
-        gap: 8px;
+        gap: 6px;
         row-gap: 4px;
         max-width: 95%;
         top: 64.5px;
+        flex-wrap: nowrap;
     }
 
     .nav a {
-        font-size: 12px;
-        line-height: 1.2;
-        padding: 3px 0;
+        font-size: 10px;
+        line-height: 1.4;
+        padding: 9px 12px;
     }
 
     .hero-top-mask {
